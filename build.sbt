@@ -111,6 +111,8 @@ lazy val `db-core` = project
       "com.busymachines" %% "pureharm-effects-cats" % pureharmEffectsV withSources(),
       "com.busymachines" %% "pureharm-config" % pureharmConfigV withSources(),
     ),
+  ).settings(
+    javaOptions ++= Seq("-source", "1.8", "-target", "1.8")
   )
 
 //=============================================================================
