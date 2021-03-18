@@ -21,6 +21,7 @@ package busymachines.pureharm.db
   */
 final case class DBConnectionConfig(
   host:     DBHost,
+  port:     DBPort,
   dbName:   DatabaseName,
   username: DBUsername,
   password: DBPassword,
@@ -28,8 +29,8 @@ final case class DBConnectionConfig(
 ) {
 
   def jdbcURL: JDBCUrl = schema match {
-    case None     => JDBCUrl.postgresql(host, dbName)
-    case Some(sc) => JDBCUrl.postgresql(host, dbName, sc)
+    case None     => JDBCUrl.postgresql(host, port, dbName)
+    case Some(sc) => JDBCUrl.postgresql(host, port, dbName, sc)
   }
 }
 

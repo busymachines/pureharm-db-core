@@ -29,13 +29,15 @@ package object db {
     */
   final type DBHost = DBHost.Type
 
+  final object DBPort extends SproutSub[Int]
+  final type DBPort = DBPort.Type
+
   final object JDBCUrl extends SproutSub[String] {
+    def postgresql(host: DBHost, port: DBPort, db: DatabaseName): this.Type =
+      this.apply(s"jdbc:postgresql://$host:$port/$db")
 
-    def postgresql(host: DBHost, db: DatabaseName): this.Type =
-      this.apply(s"jdbc:postgresql://$host/$db")
-
-    def postgresql(host: DBHost, db: DatabaseName, schema: SchemaName): this.Type =
-      this.apply(s"jdbc:postgresql://$host/$db?currentSchema=$schema")
+    def postgresql(host: DBHost, port: DBPort, db: DatabaseName, schema: SchemaName): this.Type =
+      this.apply(s"jdbc:postgresql://$host:$port/$db?currentSchema=$schema")
   }
 
   final type JDBCUrl = JDBCUrl.Type
