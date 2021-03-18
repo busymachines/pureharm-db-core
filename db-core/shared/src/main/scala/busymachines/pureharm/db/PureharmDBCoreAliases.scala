@@ -21,19 +21,10 @@ import busymachines.pureharm.db
 /** This trait provides convenience aliases to mix in directly
   * into client code in order to minimize imports.
   *
-  * E.g:
-  * {{{
-  *   package com.domainspecific
-  *
-  *   package object db extends busymachines.pureharm.dbslick.types.DBCoreTypes // +driver specific ones {
-  *     type DomainSpecificType = Int
-  *   }
-  * }}}
-  *
   * @author Lorand Szakacs, https://github.com/lorandszakacs
   * @since 02 Apr 2019
   */
-trait PureharmDBCoreTypeDefinitions {
+trait PureharmDBCoreAliases {
 
   final val DBHost: db.DBHost.type = db.DBHost
   final type DBHost = db.DBHost
@@ -59,8 +50,5 @@ trait PureharmDBCoreTypeDefinitions {
   final type DBConnectionConfig = db.DBConnectionConfig
   final val DBConnectionConfig: db.DBConnectionConfig.type = db.DBConnectionConfig
 
-  @scala.deprecated("Use Repo instead, will be removed in 0.0.6-M3", "0.0.6-M2")
-  final type DAOAlgebra[R[_], E, PK] = db.Repo[R, E, PK]
-  final type Repo[R[_], E, PK]       = db.Repo[R, E, PK]
-
+  final type Repo[R[_], E, PK] = db.Repo[R, E, PK]
 }

@@ -16,7 +16,7 @@
   */
 package busymachines.pureharm
 
-import busymachines.pureharm.phantom._
+import busymachines.pureharm.sprout._
 
 /** @author Lorand Szakacs, https://github.com/lorandszakacs
   * @since 13 Jun 2019
@@ -24,8 +24,8 @@ import busymachines.pureharm.phantom._
 package object db {
   final object DBHost extends SproutSub[String]
 
-  /** Please include port in host, if needed, e.g.
-    * {{{localhost:5432}}}
+  /** Do not include port in the hostname,
+    * configured via DBPort
     */
   final type DBHost = DBHost.Type
 
@@ -56,7 +56,4 @@ package object db {
     def public: SchemaName = SchemaName("public")
   }
   final type SchemaName = SchemaName.Type
-
-  @scala.deprecated("Use Repo instead, will be removed in 0.0.6-M3", "0.0.6-M2")
-  final type DAOAlgebra[R[_], E, PK] = Repo[R, E, PK]
 }

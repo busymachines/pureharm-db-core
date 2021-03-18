@@ -30,10 +30,10 @@ import busymachines.pureharm.effects.{Show, Traverse}
 trait Repo[R[_], E, PK] {
   def find(pk: PK): R[Option[E]]
 
-  /** Required to render the [[PK]] to return in anomaly
+  /** Required to render the PK to return in anomaly
     *
     * @return
-    *  Fails with [[DBEntryNotFoundAnomaly]] when
+    *  Fails with DBEntryNotFoundAnomaly when
     *  the entry is not found
     */
   def retrieve(pk: PK)(implicit show: Show[PK]): R[E]
