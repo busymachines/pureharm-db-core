@@ -84,9 +84,9 @@ ThisBuild / versionIntroduced := Map(
 ThisBuild / resolvers += Resolver.sonatypeRepo("releases")
 ThisBuild / resolvers += Resolver.sonatypeRepo("snapshots")
 
-val pureharmCoreV = "0.1.0-7bc6204" //https://github.com/busymachines/pureharm-core/releases
-val pureharmEffectsV = "0.1.0-4946221" //https://github.com/busymachines/pureharm-effects-cats/releases
-val pureharmConfigV = "0.1.0-ed1e9e6" //https://github.com/busymachines/pureharm-config/releases
+val pureharmCoreV    = "0.1.0" //https://github.com/busymachines/pureharm-core/releases
+val pureharmEffectsV = "0.1.0" //https://github.com/busymachines/pureharm-effects-cats/releases
+val pureharmConfigV  = "0.1.0" //https://github.com/busymachines/pureharm-config/releases
 
 //=============================================================================
 //============================== Project details ==============================
