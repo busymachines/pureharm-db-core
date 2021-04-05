@@ -16,7 +16,7 @@
 
 package busymachines.pureharm.db
 
-import busymachines.pureharm.effects.{Show, Traverse}
+import cats.{Show, Traverse}
 
 /** @tparam E
   *   The type of elements manipulated by this DAO

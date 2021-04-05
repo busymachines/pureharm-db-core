@@ -85,7 +85,6 @@ ThisBuild / resolvers += Resolver.sonatypeRepo("releases")
 ThisBuild / resolvers += Resolver.sonatypeRepo("snapshots")
 
 val pureharmCoreV    = "0.2.0" //https://github.com/busymachines/pureharm-core/releases
-val pureharmEffectsV = "0.2.0" //https://github.com/busymachines/pureharm-effects-cats/releases
 val pureharmConfigV  = "0.2.0" //https://github.com/busymachines/pureharm-config/releases
 
 //=============================================================================
@@ -108,7 +107,6 @@ lazy val `db-core` = project
     libraryDependencies ++= Seq(
       "com.busymachines" %% "pureharm-core-anomaly" % pureharmCoreV withSources(),
       "com.busymachines" %% "pureharm-core-sprout" % pureharmCoreV withSources(),
-      "com.busymachines" %% "pureharm-effects-cats" % pureharmEffectsV withSources(),
       "com.busymachines" %% "pureharm-config" % pureharmConfigV withSources(),
     ),
   ).settings(
