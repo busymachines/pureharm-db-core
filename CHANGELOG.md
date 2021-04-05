@@ -7,13 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # unreleased
 
+# 0.2.0
+
 ## deprecations
 
 - deprecate `DBConnectionConfig` companion object. Use [pureharm-config-ciris](https://github.com/busymachines/pureharm-config-ciris), or some other config library of your choice to read these values on your own terms.
 
 ### dependency upgrades
 
-- [pureharm-core-anomaly](https://github.com/busymachines/pureharm-core/releases) `02.0`
+- [pureharm-core-anomaly](https://github.com/busymachines/pureharm-core/releases) `0.2.0`
 - [pureharm-core-sprout](https://github.com/busymachines/pureharm-core/releases) `0.2.0`
 - [pureharm-effects-cats](https://github.com/busymachines/pureharm-effects-cats/releases) `0.2.0`
 - [pureharm-config](https://github.com/busymachines/pureharm-config/releases) `0.2.0`

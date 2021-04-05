@@ -6,11 +6,11 @@ See [changelog](./CHANGELOG.md).
 
 The available modules are.
 
-- `"com.busymachines" %% s"pureharm-db-core" % "0.1.0"`. Which has these as its main dependencies:
-  - [pureharm-core-anomaly](https://github.com/busymachines/pureharm-core/releases) `0.1.0`
-  - [pureharm-core-sprout](https://github.com/busymachines/pureharm-core/releases) `0.1.0`
-  - [pureharm-effects-cats](https://github.com/busymachines/pureharm-effects-cats/releases) `0.1.0`
-  - [pureharm-config](https://github.com/busymachines/pureharm-config/releases) `0.1.0`
+- `"com.busymachines" %% s"pureharm-db-core" % "0.2.0"`. Which has these as its main dependencies:
+  - [pureharm-core-anomaly](https://github.com/busymachines/pureharm-core/releases) `0.2.0`
+  - [pureharm-core-sprout](https://github.com/busymachines/pureharm-core/releases) `0.2.0`
+  - [pureharm-effects-cats](https://github.com/busymachines/pureharm-effects-cats/releases) `0.2.0`
+  - [pureharm-config](https://github.com/busymachines/pureharm-config/releases) `0.2.0`
 
 ## usage
 
