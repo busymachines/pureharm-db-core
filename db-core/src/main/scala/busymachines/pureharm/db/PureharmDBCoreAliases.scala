@@ -48,6 +48,11 @@ trait PureharmDBCoreAliases {
   final type SchemaName = db.SchemaName.Type
 
   final type DBConnectionConfig = db.DBConnectionConfig
+
+  @scala.deprecated(
+    "Companion object that depends on pureharm-config will be deprecated and removed. Use pureharm-config-ciris in userland to read the config instead.",
+    "0.2.0",
+  )
   final val DBConnectionConfig: db.DBConnectionConfig.type = db.DBConnectionConfig
 
   final type Repo[R[_], E, PK] = db.Repo[R, E, PK]

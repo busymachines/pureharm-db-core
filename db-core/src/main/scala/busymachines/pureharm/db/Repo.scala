@@ -40,19 +40,24 @@ trait Repo[R[_], E, PK] {
 
   def insert(e: E): R[PK]
 
+  @scala.deprecated("Will be removed in 0.3.0", "0.2.0")
   def insertMany(es: Iterable[E]): R[Unit]
 
   def update(e: E): R[E]
 
+  @scala.deprecated("Will be removed in 0.3.0", "0.2.0")
   def updateMany[M[_]: Traverse](es: M[E]): R[Unit]
 
   def delete(pk: PK): R[Unit]
 
+  @scala.deprecated("Will be removed in 0.3.0", "0.2.0")
   def deleteMany(pks: Iterable[PK]): R[Unit]
 
   def exists(pk: PK): R[Boolean]
 
+  @scala.deprecated("Will be removed in 0.3.0", "0.2.0")
   def existsAtLeastOne(pks: Iterable[PK]): R[Boolean]
 
+  @scala.deprecated("Will be removed in 0.3.0", "0.2.0")
   def existAll(pks: Iterable[PK]): R[Boolean]
 }
