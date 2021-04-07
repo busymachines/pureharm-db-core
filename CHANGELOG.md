@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # unreleased
 
+# 0.3.0
+
+### dependency upgrades
+
+- [pureharm-config](https://github.com/busymachines/pureharm-config/releases) `0.3.0`
+
 # 0.2.0
 
 ## deprecations

@@ -32,7 +32,7 @@ val Scala3RC1 = "3.0.0-RC1"
 //see: https://github.com/xerial/sbt-sonatype#buildsbt
 ThisBuild / sonatypeCredentialHost := "s01.oss.sonatype.org"
 
-ThisBuild / baseVersion  := "0.2"
+ThisBuild / baseVersion  := "0.3"
 ThisBuild / organization := "com.busymachines"
 ThisBuild / organizationName := "BusyMachines"
 ThisBuild / homepage     := Option(url("https://github.com/busymachines/pureharm-db-core"))
@@ -85,7 +85,7 @@ ThisBuild / resolvers += Resolver.sonatypeRepo("releases")
 ThisBuild / resolvers += Resolver.sonatypeRepo("snapshots")
 
 val pureharmCoreV    = "0.2.0" //https://github.com/busymachines/pureharm-core/releases
-val pureharmConfigV  = "0.2.0" //https://github.com/busymachines/pureharm-config/releases
+val pureharmConfigV  = "0.3.0" //https://github.com/busymachines/pureharm-config/releases
 
 //=============================================================================
 //============================== Project details ==============================
