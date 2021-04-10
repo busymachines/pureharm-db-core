@@ -84,8 +84,10 @@ ThisBuild / versionIntroduced := Map(
 ThisBuild / resolvers += Resolver.sonatypeRepo("releases")
 ThisBuild / resolvers += Resolver.sonatypeRepo("snapshots")
 
-val pureharmCoreV    = "0.2.0" //https://github.com/busymachines/pureharm-core/releases
-val pureharmConfigV  = "0.3.0" //https://github.com/busymachines/pureharm-config/releases
+// format: off
+val pureharmCoreV     = "0.2.0"     //https://github.com/busymachines/pureharm-core/releases
+val pureharmConfigV   = "0.4.0"     //https://github.com/busymachines/pureharm-config/releases
+// format: on
 
 //=============================================================================
 //============================== Project details ==============================
@@ -105,9 +107,11 @@ lazy val `db-core` = project
   .settings(
     name := "pureharm-db-core",
     libraryDependencies ++= Seq(
-      "com.busymachines" %% "pureharm-core-anomaly" % pureharmCoreV withSources(),
-      "com.busymachines" %% "pureharm-core-sprout" % pureharmCoreV withSources(),
-      "com.busymachines" %% "pureharm-config" % pureharmConfigV withSources(),
+      // format: off
+      "com.busymachines"    %% "pureharm-core-anomaly"    % pureharmCoreV     withSources(),
+      "com.busymachines"    %% "pureharm-core-sprout"     % pureharmCoreV     withSources(),
+      "com.busymachines"    %% "pureharm-config"          % pureharmConfigV   withSources(),
+      // format: on
     ),
   ).settings(
     javaOptions ++= Seq("-source", "1.8", "-target", "1.8")
