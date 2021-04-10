@@ -36,12 +36,9 @@ final case class DBConnectionConfig(
 
 import busymachines.pureharm.config._
 
-@scala.deprecated(
-  "Companion object that depends on pureharm-config will be deprecated and removed. Use pureharm-config-ciris in userland to read the config instead.",
-  "0.2.0",
-)
 object DBConnectionConfig extends ConfigLoader[DBConnectionConfig] {
   import busymachines.pureharm.config.implicits._
 
   implicit override def configReader: ConfigReader[DBConnectionConfig] = semiauto.deriveReader[DBConnectionConfig]
+
 }
