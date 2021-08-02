@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # unreleased
 
+This is the first release of the module that is available for Scala 3!
+
+### :warning: breaking changes :warning:
+- as per the `0.4.0` release notes, pureharm-config is no longer a dependency of this module. `DBConnectionConfig` now ought to be read in application code, using the strategy best suited for the project. You can depend on [pureharm-config](https://github.com/busymachines/pureharm-config) directly to have least migration impact, or ideally, migrate to using [pureharm-config-ciris](https://github.com/busymachines/pureharm-config-ciris).
+
+### dependency upgrades
+
+- [pureharm-core](https://github.com/busymachines/pureharm-core/releases) `0.3.0`
+
 ### internals
 - bump scalafmt to `3.0.0-RC6` — from `2.7.5`
 - bump sbt to `1.5.5`
