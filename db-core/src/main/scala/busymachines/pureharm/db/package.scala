@@ -18,14 +18,15 @@ package busymachines.pureharm
 
 import busymachines.pureharm.sprout._
 
-/** @author Lorand Szakacs, https://github.com/lorandszakacs
-  * @since 13 Jun 2019
+/** @author
+  *   Lorand Szakacs, https://github.com/lorandszakacs
+  * @since 13
+  *   Jun 2019
   */
 package object db {
   final object DBHost extends SproutSub[String]
 
-  /** Do not include port in the hostname,
-    * configured via DBPort
+  /** Do not include port in the hostname, configured via DBPort
     */
   final type DBHost = DBHost.Type
 
@@ -33,6 +34,7 @@ package object db {
   final type DBPort = DBPort.Type
 
   final object JDBCUrl extends SproutSub[String] {
+
     def postgresql(host: DBHost, port: DBPort, db: DatabaseName): this.Type =
       this.apply(s"jdbc:postgresql://$host:$port/$db")
 
