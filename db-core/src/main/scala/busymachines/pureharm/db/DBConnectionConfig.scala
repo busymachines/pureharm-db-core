@@ -30,17 +30,17 @@ final case class DBConnectionConfig(
   schema:   Option[SchemaName],
 ) {
 
+  @scala.deprecated(
+    "Use psqlJdbcURL instead, it's equivalent to this, it just explicitely states what JDBC url it generates",
+    "0.5.0",
+  )
   def jdbcURL: JDBCUrl = schema match {
     case None     => JDBCUrl.postgresql(host, port, dbName)
     case Some(sc) => JDBCUrl.postgresql(host, port, dbName, sc)
   }
-}
 
-import busymachines.pureharm.config._
-
-object DBConnectionConfig extends ConfigLoader[DBConnectionConfig] {
-  import busymachines.pureharm.config.implicits._
-
-  implicit override def configReader: ConfigReader[DBConnectionConfig] = semiauto.deriveReader[DBConnectionConfig]
-
+  def psqlJdbcURL: JDBCUrl = schema match {
+    case None     => JDBCUrl.postgresql(host, port, dbName)
+    case Some(sc) => JDBCUrl.postgresql(host, port, dbName, sc)
+  }
 }
