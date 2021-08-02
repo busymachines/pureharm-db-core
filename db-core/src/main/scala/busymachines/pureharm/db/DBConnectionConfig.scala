@@ -16,8 +16,10 @@
 
 package busymachines.pureharm.db
 
-/** @author Lorand Szakacs, https://github.com/lorandszakacs
-  * @since 16 Jun 2019
+/** @author
+  *   Lorand Szakacs, https://github.com/lorandszakacs
+  * @since 16
+  *   Jun 2019
   */
 final case class DBConnectionConfig(
   host:     DBHost,

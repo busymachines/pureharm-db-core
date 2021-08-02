@@ -21,11 +21,12 @@ import cats.{Show, Traverse}
 /** @tparam E
   *   The type of elements manipulated by this DAO
   * @tparam PK
-  *   The "primary key", or "id" if you will, by which elements
-  *   of type `E` are identified.
+  *   The "primary key", or "id" if you will, by which elements of type `E` are identified.
   *
-  * @author Lorand Szakacs, https://github.com/lorandszakacs
-  * @since 04 Apr 2019
+  * @author
+  *   Lorand Szakacs, https://github.com/lorandszakacs
+  * @since 04
+  *   Apr 2019
   */
 trait Repo[R[_], E, PK] {
   def find(pk: PK): R[Option[E]]
@@ -33,8 +34,7 @@ trait Repo[R[_], E, PK] {
   /** Required to render the PK to return in anomaly
     *
     * @return
-    *  Fails with DBEntryNotFoundAnomaly when
-    *  the entry is not found
+    *   Fails with DBEntryNotFoundAnomaly when the entry is not found
     */
   def retrieve(pk: PK)(implicit show: Show[PK]): R[E]
 
